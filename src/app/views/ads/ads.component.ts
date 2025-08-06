@@ -12,6 +12,7 @@ import { ActivatedRoute, Router } from '@angular/router';
 export class AdsComponent implements OnInit {
 
     module:  string = '';
+    componentName: string = '';
 
     constructor(private _router: Router,
         private _activeRouter: ActivatedRoute
@@ -21,10 +22,17 @@ export class AdsComponent implements OnInit {
             console.log('params: ', params);
             if(params) {
                 this.module = params.id;
-            }   
+                this.getComponent();
+            }
         })
     }
 
     ngOnInit(): void {
+    }
+
+    getComponent() {
+        if(this.module.toLowerCase() == 'dra.mariana.gonzales') {
+            this.componentName = 'ad001';
+        }
     }
 }
