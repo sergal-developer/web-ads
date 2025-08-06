@@ -1,9 +1,10 @@
 import { PreloadAllModules, RouterModule, Routes } from '@angular/router';
+import { LandingComponent } from './views/landing/landing.component';
 
 const appRoutes: Routes = [
     {
       path: '',
-      loadChildren: () => import('./views/landing/landing.module').then(m => m.LandingModule)
+      component: LandingComponent
     },
     {
       path: 'ads/:id',

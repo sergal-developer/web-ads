@@ -1,4 +1,5 @@
 import { Component, OnInit, ViewEncapsulation } from '@angular/core';
+import { ActivatedRoute, Router } from '@angular/router';
 
 @Component({
     selector: 'ads',
@@ -9,7 +10,19 @@ import { Component, OnInit, ViewEncapsulation } from '@angular/core';
 })
 
 export class AdsComponent implements OnInit {
-    constructor() {
+
+    module:  string = '';
+
+    constructor(private _router: Router,
+        private _activeRouter: ActivatedRoute
+    ) {
+
+        this._activeRouter.params.subscribe((params: any) => {
+            console.log('params: ', params);
+            if(params) {
+                this.module = params.id;
+            }   
+        })
     }
 
     ngOnInit(): void {
