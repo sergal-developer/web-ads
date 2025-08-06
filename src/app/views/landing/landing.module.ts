@@ -1,0 +1,30 @@
+import { CommonModule } from '@angular/common';
+import { NgModule } from '@angular/core';
+import { FormsModule } from '@angular/forms';
+import { RouterModule } from '@angular/router';
+import { TranslateModule } from '@ngx-translate/core';
+import { GoogleAnalyticsService } from '../../shared/services/google.analytics.service';
+import { LandingComponent } from './landing.component';
+
+@NgModule({
+    imports: [ 
+        CommonModule,
+        FormsModule,
+        RouterModule.forChild([{ path: '', component: LandingComponent, children: [] }]),
+        // VIEWS
+
+        // COMPONENTS
+        TranslateModule
+    ],
+    declarations: [
+        LandingComponent,
+    ],
+    exports: [
+        RouterModule
+    ],
+    providers: [
+        GoogleAnalyticsService
+    ]
+})
+export class LandingModule {
+}
