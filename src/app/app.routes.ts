@@ -14,6 +14,6 @@ const appRoutes: Routes = [
   ];
   
   export const AppRoutes = RouterModule.forRoot(appRoutes, {
-    useHash: true,
+    useHash: false,
     anchorScrolling: 'enabled',
     preloadingStrategy: PreloadAllModules});
