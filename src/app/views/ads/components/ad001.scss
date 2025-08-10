@@ -1,4 +1,9 @@
+@import url('https://fonts.googleapis.com/css2?family=Lexend+Deca:wght@100..900&family=Outfit:wght@100..900&display=swap');
+
 ad001 {
+    font-family: "Outfit", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
     background: white;
     // background: linear-gradient(0deg,rgba(235, 235, 235, 1) 0%, rgba(255, 255, 255, 1) 56%);;
     color: #3d2529;
@@ -10,36 +15,118 @@ ad001 {
     justify-content: flex-start;
     flex-direction: column;
     gap: 10px;
-    padding: 10%;
+    // padding: 10%;
+
+    .background-pattern {
+        width: 100%;
+        position: relative;
+        min-height: 100%;
+        overflow: hidden;
+        position: fixed;
+        z-index: 1;
+
+        img {
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
+
+        .top {
+            margin: 0 auto;
+            right: 0;
+            top: -18%;
+            z-index: 2;
+        }
+
+        .left {
+            margin: 0 auto;
+            right: auto;
+            left: -70%;
+        }
+
+        .right {
+            margin: 0 auto;
+            right: -70%;
+            left: auto;
+        }
+
+        .right-2 {
+            margin: 0 auto;
+            right: -52%;
+            left: auto;
+            top: 40%;
+        }
+
+        .bottom {
+            margin: 0 auto;
+            right: 0;
+            bottom: -145px;
+            top: auto;
+        }
+    }
+
+    .content {
+        z-index: 10;
+        width: 100%;
+        top: 0;
+        position: relative;
+        left: 0;
+        padding: 5% 10% 0;
+    }
 
     .title {
         font-size: 22pt;
         line-height: 1.2;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        color: white;
+        gap: 10px;
 
-        .subtitle {
-            text-transform: uppercase;
-            font-size: 14pt;
-
-            &.right {
-                text-align: right;
-            }
+        img {
+            width: 45px;
         }
 
-        z-index: 10;
+        span {
+            font-weight: bold;
+            text-transform: uppercase;
+            color: #f1bebe;
+        }
+
+        div {
+            display: flex;
+            flex-direction: column;
+            line-height: 0.9;
+        }
+    }
+
+    .subtitle {
+        text-transform: uppercase;
+        font-size: 16pt;
+
+        &.right {
+            text-align: right;
+        }
     }
 
     .list {
-        padding: 0 0 50px 0;
+        padding: 50px 0;
+        margin: 0 -25px;
 
         ol {
             list-style: decimal-leading-zero;
+            display: flex;
+            flex-wrap: wrap;
+            flex-direction: row;
+            justify-content: flex-start;
+            align-items: flex-start;
 
             li {
                 margin-left: 50px;
 
                 &::marker {
                     color: #26CFD2;
-                    font-size: 22pt;
+                    // font-size: 22pt;
                 }
             }
         }
@@ -79,4 +166,12 @@ ad001 {
             z-index: 3;
         }
     }
+}
+
+
+.outfit {
+    font-family: "Outfit", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
 }
