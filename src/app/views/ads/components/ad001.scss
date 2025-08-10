@@ -115,18 +115,18 @@ ad001 {
 
         ol {
             list-style: decimal-leading-zero;
-            display: flex;
-            flex-wrap: wrap;
-            flex-direction: row;
-            justify-content: flex-start;
-            align-items: flex-start;
+            // display: flex;
+            // flex-wrap: wrap;
+            // flex-direction: row;
+            // justify-content: flex-start;
+            // align-items: flex-start;
 
             li {
                 margin-left: 50px;
 
                 &::marker {
                     color: #26CFD2;
-                    // font-size: 22pt;
+                    font-size: 16pt;
                 }
             }
         }

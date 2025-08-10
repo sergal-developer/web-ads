@@ -5,7 +5,7 @@
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
-    "build": "ng build && gulp copy-resources",
+    "build": "ng build --base-href /web-ads/ --deploy-url /web-ads/ && gulp copy-resources",
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
     "deploy": "ng deploy",
